@@ -1,9 +1,9 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:action_cable/store/callbacks.store.dart';
-import 'package:action_cable/types.dart';
-import 'package:action_cable/web_socket/abstractions/web_socket.interface.dart';
+import 'package:x_action_cable/store/callbacks.store.dart';
+import 'package:x_action_cable/types.dart';
+import 'package:x_action_cable/web_socket/abstractions/web_socket.interface.dart';
 import 'package:web_socket_channel/web_socket_channel.dart';
 
 import 'action_callback.dart';

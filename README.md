@@ -1,4 +1,4 @@
-![Pub](https://img.shields.io/pub/v/action_cable)
+![Pub](https://img.shields.io/pub/v/xActionCable)
 
 # ActionCable in Dart
 
@@ -101,7 +101,7 @@ cable.disconnect();
 
 ## ActionCable protocol
 
-Anycable has [a great doc](https://docs.anycable.io/#/misc/action_cable_protocol) on that topic.
+Anycable has [a great doc](https://docs.anycable.io/#/misc/xActionCable_protocol) on that topic.
 
 ## Contributors ✨
 

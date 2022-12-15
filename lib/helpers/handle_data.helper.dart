@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:action_cable/store/callbacks.store.dart';
+import 'package:x_action_cable/store/callbacks.store.dart';
 import 'package:collection/collection.dart';
 import 'package:logger/logger.dart';
 

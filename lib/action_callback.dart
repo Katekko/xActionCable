@@ -1,4 +1,4 @@
-import 'package:action_cable/types.dart';
+import 'package:x_action_cable/types.dart';
 
 class ActionCallback {
   final String name;
