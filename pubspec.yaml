@@ -1,0 +1,16 @@
+name: action_cable
+version: 1.2.0
+description: >-
+  Not an only port for action cable, but with some pattern to help you integrate with your web or apps.
+homepage: https://github.com/katekko/xActionCable
+documentation: https://github.com/katekko/xActionCable
+
+environment:
+  sdk: '>=2.17.0 <3.0.0'
+
+dependencies:
+  web_socket_channel: ^2.2.0
+  logger: ^1.1.0
+
+dev_dependencies:
+  test:
