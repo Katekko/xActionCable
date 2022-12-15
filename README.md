@@ -80,7 +80,9 @@ channel.performAction(
 ```
 
 Here we have some other parameters.
-ACTION: will be the name of your server side method that you are trying to call
+
+action: will be the name of your server side method that you are trying to call
+
 actionParams: will be the parameters that you pass to the server
 
 Bellow we have a method example in ruby on rails
