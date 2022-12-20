@@ -10,6 +10,7 @@ import 'action_callback.dart';
 import 'action_channel.dart';
 import 'helpers/identifier.helper.dart';
 import 'helpers/handle_data.helper.dart';
+import 'helpers/logger.helper.dart';
 
 IWebSocket _webSocket = IWebSocket();
 
@@ -94,8 +95,9 @@ class ActionCable {
     _listener.cancel();
   }
 
-  void _send(Map payload) {
+  void _send(Map<String, dynamic> payload) {
     _socketChannel.sink.add(jsonEncode(payload));
+    ActionLoggerHelper.log(payload);
   }
 
   void _addHandleHelthCheckListener() {

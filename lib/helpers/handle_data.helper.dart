@@ -6,6 +6,7 @@ import 'package:logger/logger.dart';
 
 import '../types.dart';
 import 'identifier.helper.dart';
+import 'logger.helper.dart';
 
 class HandleDataHelper with CallbacksStore {
   final VoidCallback? _onConnected;
@@ -19,6 +20,7 @@ class HandleDataHelper with CallbacksStore {
 
   void onData(dynamic payload) {
     payload = jsonDecode(payload);
+    ActionLoggerHelper.log(payload);
 
     if (payload['type'] != null) {
       _handleProtocolMessage(payload);
