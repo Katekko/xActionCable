@@ -1,5 +1,5 @@
 name: x_action_cable
-version: 0.1.0
+version: 0.2.0
 description: >-
   Not an only port for action cable, but with some pattern to help you integrate with your web or apps.
 homepage: https://github.com/katekko/xActionCable
