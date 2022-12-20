@@ -21,8 +21,8 @@ class ActionChannel {
     _sendMessageCallback(command);
   }
 
-  void performAction({
-    String? action,
+  void performAction(
+    String action, {
     Map<String, dynamic>? params,
   }) {
     params ??= {};

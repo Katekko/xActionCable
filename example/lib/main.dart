@@ -68,10 +68,10 @@ class _HomeScreenState extends State<HomeScreen> {
   void onChannelSubscribed() {
     debugPrint('Subscribed to the ChatChannel');
     // After you subscribed to the channel, you can start send actions to it
-    // The [action] parameters is the method's name in the server that you are trying to call
+    // The first parameter is the method's name in the server that you are trying to call
     // And the [params] is the data that you need to send to the server
     channel.performAction(
-      action: 'send_message',
+      'send_message',
       params: {'message': 'Hello World'},
     );
   }
