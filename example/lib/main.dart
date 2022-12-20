@@ -63,7 +63,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   void onConnected() => debugPrint('connected');
   void onConnectionLost() => debugPrint('connection lost');
-  void onCannotConnect() => debugPrint('cannot connect');
+  void onCannotConnect(dynamic reason) => debugPrint(reason.toString());
 
   void onChannelSubscribed() {
     debugPrint('Subscribed to the ChatChannel');

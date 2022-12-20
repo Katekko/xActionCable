@@ -33,7 +33,7 @@ class ActionCable {
     Map<String, String> headers: const {},
     VoidCallback? onConnected,
     VoidCallback? onConnectionLost,
-    VoidCallback? onCannotConnect,
+    required void Function(dynamic reason)? onCannotConnect,
   }) {
     final handleDataHelper = _createHandleDataHelper(
       onConnected: onConnected,
@@ -77,13 +77,13 @@ class ActionCable {
   void _addHandleDataListener({
     required WebSocketChannel socketChannel,
     required HandleDataHelper handleData,
-    required VoidCallback? onCannotConnect,
+    required void Function(dynamic message)? onCannotConnect,
   }) {
     _listener = socketChannel.stream.listen(
       handleData.onData,
-      onError: (_) {
+      onError: (reason) {
         _disconnect(); // close a socket and the timer
-        onCannotConnect?.call();
+        onCannotConnect?.call(reason);
       },
     );
   }
