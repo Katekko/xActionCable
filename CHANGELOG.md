@@ -1,3 +1,6 @@
+# 2023-01-10 0.3.0
+Improving logger
+
 # 2022-12-20 0.2.0
 Change action parameter from [channel.performAction] to required
 Adding reason when its not possible to connect to a cable

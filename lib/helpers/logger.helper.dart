@@ -1,4 +1,4 @@
-import 'package:logger/logger.dart';
+import 'dart:developer' as dev;
 
 class ActionLoggerHelper {
   static bool isActivated = false;
@@ -7,16 +7,26 @@ class ActionLoggerHelper {
   static bool protocol = true;
   static bool message = true;
 
-  static void log(Map<String, dynamic> data) {
-    if (!isActivated) return;
-    if (!protocol && data['type'] != null) return;
-    if (!ping && data['type'] == 'ping') return;
+  static String? log(Map<String, dynamic> data) {
+    if (!isActivated) return null;
+    if (!protocol && data['type'] != null) return null;
+    if (!ping && data['type'] == 'ping') return null;
     if (!action &&
         data.containsKey('command') &&
         data['command'] == 'message') {
-      return;
+      return null;
     }
 
-    Logger().i(data);
+    String name = '';
+    if (data['type'] != null) {
+      name = '| PROTOCOL |';
+      if (data['type'] == 'ping') name += '~ PING ~';
+    } else if (data.containsKey('command') && data['command'] == 'message') {
+      name = '| PERFOMING ACTION |';
+    }
+
+    final dataString = data.toString();
+    dev.log(dataString, name: name);
+    return dataString;
   }
 }
