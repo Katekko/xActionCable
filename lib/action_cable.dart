@@ -112,6 +112,19 @@ class ActionCable {
     }
   }
 
+  /// Subscribe to a channel
+  /// ```Dart
+  /// void receiveMessage(Map payload) => print(payload);
+  /// final actionCallback = ActionCallback(name: 'receive_message', callback: receiveMessage);
+  ///
+  ///  ActionChannel channel = cable.subscribe(
+  ///   'Chat', // either 'Chat' and 'ChatChannel' is fine
+  ///    channelParams: { 'room': 'private' },
+  ///    onSubscribed: (){}, // `confirm_subscription` received
+  ///    onDisconnected: (){}, // `disconnect` received
+  ///    callbacks: [actionCallback] // Callback list to able the server  to call any method that you registered in your aplicaticon
+  ///  );
+  /// ```
   ActionChannel subscribe(
     String channelName, {
     Map? channelParams,
